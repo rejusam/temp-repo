@@ -112,7 +112,26 @@ Papers, methods, datasets and collaborators shown as a graph, with the RAG "Ask 
 
 **Later:** metapopulation map of NZ regions, Lassa spillover track, te reo Māori + other languages, Screening Explorer track, "load your own network" (CSV edge list).
 
-## 6. Open questions
+## 6. Screen-by-screen mapping (from Protocol Explorer screenshots)
+
+What the original app does on mobile, and the Outbreak Explorer version:
+
+| Protocol Explorer | Outbreak Explorer |
+|---|---|
+| **Catalogue drawer**: "Internet Protocols", tabs ALL 33 · CORE 8 · APPLICATION 16 · SECURITY 9 | **"Infectious Diseases"** drawer, tabs ALL ~30 · RESPIRATORY · VECTOR-BORNE · ZOONOTIC · MODELS & INTERVENTIONS |
+| Each protocol (HTTP, TCP, DNS…) has a code + full name | Each entry has a short name + full name: *COVID-19 · SARS-CoV-2*, *Measles · Rubeola*, *Dengue*, *Lassa fever*, *Influenza A*, *TB*, *SEIR model*, *Herd immunity*… |
+| Expands to **numbered steps**: Client request → DNS → TCP → HTTP exchange → Rendering | Expands to **numbered stages**: 1 Exposure → 2 Incubation → 3 Infectious → 4 Transmission → 5 Recovery / outcome |
+| Status circle per protocol (progress) | Same: ticks off diseases you've finished |
+| **Canvas** with isometric icons: Client, Router, Internet, DNS resolver, Web server (with IPs) | Isometric icons: **Household, School, Workplace, Hospital, Marae / community hall, Mosquito, Rodent**, with people as nodes |
+| **NETWORK / SEQUENCE** toggle | **NETWORK** (contact graph) / **TIMELINE** (swimlane chart of who infected whom, i.e. the transmission tree) |
+| **Protocol overview** card + ACTIVE badge + spec table (Layer, Default port, Transport, Data format, Methods, Defined in RFC) | **Disease overview** card + ACTIVE / ELIMINATED / ENDEMIC badge + spec table (**Pathogen, Route, R₀, Incubation, Infectious period, Severity / CFR, Vaccine, Key references**) |
+| **Packet flow** section (packets decoded byte by byte) | **Transmission log**: each event decoded (source, target, setting, probability, compartment change) |
+| Bottom bar: speed 1× · back · PLAY · STEP · reset | Same controls, plus a **day counter** and an **R_t** readout |
+| Search, language picker, light/dark toggle, designer credit | Same, with **te reo Māori** as a first-class language and a credit line linking to your profile |
+
+**Look and feel:** keep the parts that work (dark navy, uppercase monospace headings, thin borders, one accent colour, isometric line icons). Give it its own identity rather than a copy, e.g. a teal/coral palette for infection states and a different display font. Credit Protocol Explorer as inspiration.
+
+## 7. Open questions
 
 1. Who is it mainly for: students, the public, or researchers and policymakers? This decides how mathematical the dissector should be.
 2. Keep it fully separate, or make it part of the TasmanLab / personal site brand?
